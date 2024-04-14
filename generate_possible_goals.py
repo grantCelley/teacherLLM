@@ -1,8 +1,4 @@
-import ollama
-import openai
-
 from guidance import models, assistant, user, system, select, gen
-import tiktoken
 
 MODEL = "dolphin-mistral:7b-v2.8-q2_K"
 
