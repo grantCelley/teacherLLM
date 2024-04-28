@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 dolphin-2.8-mistral-7b-v02.Q3_K_M.gguf
+dolphin-2.8-mistral-7b-v02.Q2_K.gguf
