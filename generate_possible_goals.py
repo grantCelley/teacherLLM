@@ -1,12 +1,17 @@
-from llama_cpp import Llama
+import guidance
+from guidance import gen, select
+
+import os
 
 import json
 import glob
 
 
 MODEL = "dolphin-2.8-mistral-7b-v02.Q2_K.gguf"
+model_kwargs = {"verbose": False, "n_gpu_layers": 256, "n_ctx": 30000}
 
-model = Llama(MODEL, n_ctx=13000, n_gpu_layers=100, verbose=False)
+model = guidance.models.LlamaCppChat(MODEL, echo=False, **model_kwargs)
+
 
 
 def generate_topics(course_name: str, summary: str):
@@ -38,31 +43,19 @@ def generate_topics(course_name: str, summary: str):
 
     topics = None
     while topics == None:
-        response = model.create_chat_completion(
-            messages=[
-                {
-                    'role': 'system',
-                    'content': system_prompt
-                },
-                {
-                    'role': 'user',
-                    'content': user_prompt
-                }
-            ],
-            response_format={
-                "type": "json_object",
-                "schema": schema
-            },
-            temperature=0.7
-        )["choices"][0]["message"]["content"]
-        print(response)
-        try:
-            obj = json.loads(response)
-        except Exception as e:
-            obj = {}
-        print(obj)
-        if "topics" in obj:
-            topics = obj["topics"]
+        with guidance.system():
+            lm = model + system_prompt
+        with guidance.user():
+            lm = lm + user_prompt
+        with guidance.assistant():
+            lm = lm + f"""{{
+            "topics":[ """
+            for i in range(10):
+                lm += "\"" + gen("topics", list_append=True, max_tokens=10, stop='"') +  "\""
+                if i < 9:
+                    lm += ",\n"
+
+        topics = lm['topics']
 
     return topics
 
@@ -72,70 +65,26 @@ def is_section_Important(course_name: str, section:str, topic_list: list[str]):
     :param course_name: Name of the course to generate the topics for
     :param summary: Summary from wikipedia about the overall topic
     :returns: List[str] List of the topics
-    """ 
-
-    schema ={
-        "description": "The schema to get a topic out",
-        "type": "object",
-        "properties": {
-            "topic": {
-            "type": "string"
-            }
-        },
-        "required": [
-            "topic"
-        ]
-    }
+    """
 
     topic_list.append("None")
     topic_str = '\n* '.join(topic_list)
     topic_str = '\n* ' + topic_str
 
-    topic_examples = ""
-    for topic in topic_list:
-        topic_obj = {
-            "topic": topic
-            }
-        
-        topic_one = "{topic_obj}\n"
-
-        topic_examples += topic_one
-
-    system_prompt = f"You are a professor creating a course for {course_name}. I will give you a wikipedia section and a list of topics. Tell me if the section would be part of any of the topics. If the section does not fall into any of the topics just type 'None'. The topics are:\n{topic_str}\n The output is in JSON in the following schema of {schema}. Possible topics are {topic_list}"
+    system_prompt = f"You are a professor creating a course for {course_name}. I will give you a wikipedia section and a list of topics. Tell me if the section would be part of any of the topics. If the section does not fall into any of the topics just type 'None'. The topics are:\n{topic_str}"
 
     user_prompt = f"Wikipedia Section:\n{section}\n\n Topics:{topic_str}\nWhat topic is would the selection be part of? Just classify it."
 
     topic = None
-
-    i = 5
-    while topic is None and i > 0:
-        response = model.create_chat_completion(
-            messages=[
-            {
-                'role': 'system',
-                'content': system_prompt
-            },
-            {
-                'role':  'user',
-                'content': user_prompt
-            }
-        ],
-        response_format={
-            "type": "json_object",
-            "schema": schema
-        }
-        )["choices"][0]["message"]["content"]
-
-        try:
-            obj = json.loads(response)
-        except Exception as e:
-            obj = {}
-        if "topic" in obj:
-            if type(obj["topic"]) is str and obj["topic"] in topic_list:
-                topic = obj["topic"]
-        i -= 1
-        if i == 0 and obj == {}:
-            topic = "None"
+    with guidance.system():
+        lm = model + system_prompt
+    with guidance.user():
+        lm += user_prompt
+    with guidance.assistant():
+        lm += select(topic_list, 'topic')
+    
+    topic = lm['topic']
+    print(topic)
     if topic == "None":
         return False, 
     else:
@@ -167,45 +116,37 @@ def generate_Objectives(title, section):
         ]
     }
 
-    system = f"You are a teacher creating the course objectives for {title}. I will give you a wikipedia section and you will generate course objectives.The output is JSON in the schema of {schema}"
+    action_verbs_list = ["implement", 'design' , 'construct', 'develop', 'produce', 'revise', 'propose', 'build', 'devise', 'invent', 'judge', 'justify', 'select', 'critique', 'defend', 'rate', 'evaluate', 'assess', 'rank', 'argue', 'review', 'distinguish', 'differentiate', 'orginize', 'examine', 'compare', 'contrast', 'classify', 'apply', 'use', 'solve', 'compute', 'implement', 'instruct', 'demonstrate', 'interpret', 'complete', 'explain', 'demonstrate', 'summarize', 'review', 'generalize', 'describe', 'identify', 'represent', 'paraphrase', 'interpret', 'define', 'identify', 'recall', 'recite', 'reproduce', 'list', 'name', 'memorize', 'repeat', 'state', 'duplicate', 'match']
+
+    system = f"You are a teacher creating the course objectives for {title}. I will give you a wikipedia section and you will generate course objectives. The output is in JSON. The schema is {schema}"
     
-    goals = []
-    while len(goals ) == 0:
-        print("Generating goals")
-        response = model.create_chat_completion(
-            messages=[
-            {
-                'role':'system',
-                'content': system
-            },
-            {
-                'role':  'user',
-                'content': section
-            }
-        ],
-        response_format={
-            "type": "json_object",
-            "schema":schema
-        }
-        )["choices"][0]["message"]["content"]
-        print(response)
-        print("goals generated")
-        try:
-            obj = json.loads(response)
-        except Exception as e:
-            obj = {}
-        if "goals" in obj:
-            goals = obj["goals"]
-        else:
-            print("Have to try again")
-        
+    numberOfGoals = 5
+
+    with guidance.system():
+        lm = model + system
+    with guidance.user():
+        lm += section
+    with guidance.assistant():
+        lm + """{
+        goals: ["""
+
+        for i in range(numberOfGoals):
+            lm += '"The student will be able to' + select(action_verbs_list, "goal_actions", list_append=True) + gen('end_goals', list_append=True, max_tokens=50, stop=['"', '.',]) + '"'
+            if i < numberOfGoals - 1:
+                lm += ",\n"
+            
+        goals = []
+        for i in range(numberOfGoals):
+            goal = "The student will be able to " + lm['goal_actions'][i] + "" + lm['end_goals'][i]
+            goals.append(goal)
 
     return goals
 
    
 
 pages_file_names = glob.glob("./page_content/*.json")
-pages_file_names = [pages_file_names[0]]
+
+
 print(pages_file_names)
 
 for file_name in pages_file_names:
@@ -219,6 +160,7 @@ for file_name in pages_file_names:
     sections = page_content['sections']
 
     page_topics = generate_topics(course_name=title, summary=sections[0]['content'])
+    print(sections[0]['content'])
     print("Topics generated: ")
     print(page_topics)
 
@@ -240,3 +182,16 @@ for file_name in pages_file_names:
         print(section_title)
         print(section['goals'])
         final_sections.append(section)
+    
+    new_page_content ={
+        "title": title,
+        "key": key,
+        "summary": sections[0]['content'],
+        "sections": final_sections
+    }
+
+    file_path = "goal_pages/v1/" + title + ".json"
+    if not os.path.exists(file_path):
+        os.mknod(file_path)
+    with open(file_path,"w") as f:
+        json.dump(new_page_content,f)
