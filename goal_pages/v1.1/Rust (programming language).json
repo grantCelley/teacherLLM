@@ -1,0 +1,215 @@
+{
+    "title": "Rust (programming language)",
+    "chapters": [
+        {
+            "title": "Introduction to Rust",
+            "goals": [
+                "The student will be able to complete the following tasks:",
+                "The student will be able to compute the following tasks:",
+                "The student will be able to demonstrate the following tasks:",
+                "The student will be able to implement the following tasks:The student will be able tounderstand the following tasks:",
+                "The student will be able to apply the following tasks:The student will be able toanalyze the following tasks:The student will be able toevaluate the following tasks:The student will be able tosynthesize the following tasks:The student will be able toevaluate",
+                "The student will be able to implementThe student will be able toanalyzeThe student will be able tosynthesizeThe student will be able toevaluateThe student will be able tosynthesizeThe student will be able toevaluate",
+                "The student will be able to evaluateThe student will be able tosynthesizeThe student will be able toevaluate",
+                "The student will be able to identifyThe student will be able toanalyzeThe student will be able tosynthesizeThe student will be able toevaluateThe student will be able tosynthesize",
+                "The student will be able to identifyThe student will be able toanalyzeThe student will be able tosynthesizeThe student will be able toevaluate",
+                "The student will be able to demonstrateThe student will be able toimplementThe student will be able toanalyzeThe student will be able tosynthesizeThe student will be able toevaluateThe student will be able tosynthesize"
+            ]
+        },
+        {
+            "title": "Basic Syntax and Concepts",
+            "goals": [
+                "The student will be able to identify and understand the basic syntax and concepts of the Rust programming language. This includes understanding the basic data types, control structures, and functions. The student will also be able to write simple programs in Rust and understand how the Rust compiler works",
+                "The student will be able to identify and understand the basic syntax and concepts of the Rust programming language. This includes understanding the basic data types, control structures, and functions. The student will also be able to write simple programs in Rust and understand how the Rust compiler works",
+                "The student will be able to apply the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the R",
+                "The student will be able to use the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the R",
+                "The student will be able to implement the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the R",
+                "The student will be able to implement the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the Rust",
+                "The student will be able to develop the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the R",
+                "The student will be able to demonstrate the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the R",
+                "The student will be able to demonstrate the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the Rust",
+                "The student will be able to differentiate the basic syntax and concepts of the Rust programming language to solve problems and create programs. This includes understanding how to use variables, control structures, and functions to create programs that solve problems. The student will also be able to understand how the R"
+            ]
+        },
+        {
+            "title": "Variables and Data Types",
+            "goals": [
+                "The student will be able to define and use variables in Rust. ",
+                "The student will be able to identify and use the basic data types in Rust. The student will be able tounderstand the concept of mutability and immutability in Rust. The student will be able tounderstand the concept of ownership and borrowing in Rust",
+                "The student will be able to identify and use the basic control structures in Rust. The student will be able tounderstand the concept of functions and closures in Rust. The student will be able tounderstand the concept of error handling and panic in Rust. The",
+                "The student will be able to implement basic algorithms and data structures in Rust.",
+                "The student will be able to implement basic algorithms and data structures in Rust.",
+                "The student will be able to use the Rust standard library and external libraries.",
+                "The student will be able to apply the concepts learned in the course to solve problems in Rust.",
+                "The student will be able to develop simple Rust programs.",
+                "The student will be able to demonstrate proficiency in the use of Rust.",
+                "The student will be able to explain the advantages and disadvantages of using Rust."
+            ]
+        },
+        {
+            "title": "Control Structures",
+            "goals": [
+                "The student will be able to identify and use the basic control structures in the Rust programming language. This includes:",
+                "The student will be able to identify and use the basic control structures in the Rust programming language. This includes:",
+                "The student will be able to use the basic control structures in the Rust programming language. This includes:",
+                "The student will be able to explain the purpose and function of the basic control structures in the Rust programming language.",
+                "The student will be able to demonstrate the use of the basic control structures in the Rust programming language.",
+                "The student will be able to apply the basic control structures in the Rust programming language.",
+                "The student will be able to demonstrate the use of the basic control structures in the Rust programming language.",
+                "The student will be able to differentiate between the basic control structures in the Rust programming language.",
+                "The student will be able to describe the purpose and function of the basic control structures in the Rust programming language.",
+                "The student will be able to distinguishthe basic control structures in the Rust programming language."
+            ]
+        },
+        {
+            "title": "Functions and Closures",
+            "goals": [
+                "The student will be able to define and use functions and closures in Rust. ",
+                "The student will be able to explain the concept of closures and how they are used in Rust. The student will be able toimplement functions and closures in Rust code. The student will be able tounderstand the differences between functions and closures in Rust.",
+                "The student will be able to identify the appropriate use of functions and closures in Rust code.",
+                "The student will be able to identify the appropriate use of functions and closures in Rust code.",
+                "The student will be able to demonstrate the use of functions and closures in Rust code.",
+                "The student will be able to demonstrate the use of functions and closures in Rust code.",
+                "The student will be able to differentiate between functions and closures in Rust code.",
+                "The student will be able to describe the differences between functions and closures in Rust code.",
+                "The student will be able to distinguishthe appropriate use of functions and closures in Rust code.",
+                "The student will be able to defend the appropriate use of functions and closures in Rust code."
+            ]
+        },
+        {
+            "title": "Ownership and Borrowing",
+            "goals": [
+                "The student will be able to explain the concept of ownership and borrowing in Rust. They will understand how Rust's memory management is different from other languages, and how it affects the way they write code. They will also be able to demonstrate how to use the borrow",
+                "The student will be able to demonstrate how to use the borrow checker, and understand how it helps prevent memory-related errors. They will also be able to explain how the borrow checker works and how it can be used to improve code quality. The student will be able to",
+                "The student will be able to demonstrate how to use the borrow checker, and understand how it helps prevent memory-related errors. They will also be able to explain how the borrow checker works and how it can be used to improve code quality. The student will be able to",
+                "The student will be able to differentiate between the different types of borrowing in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory",
+                "The student will be able to distinguishthe different types of borrowing in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory-",
+                "The student will be able to describe the different types of lifetimes in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory",
+                "The student will be able to design the different types of lifetimes in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory",
+                "The student will be able to define the different types of lifetimes in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory",
+                "The student will be able to defend the different types of lifetimes in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory",
+                "The student will be able to develop the different types of lifetimes in Rust, and understand how they affect the program's behavior. They will also be able to demonstrate how to use the borrow checker to ensure that the program is safe and does not cause any memory"
+            ]
+        },
+        {
+            "title": "Error Handling and Panic",
+            "goals": [
+                "The student will be able to explain the concept of error handling in Rust and understand the role of the `Result` type in error handling. They will also be able to understand the concept of panic in Rust and how it is used to handle runtime errors.",
+                "The student will be able to implement error handling in Rust programs by using the `Result` type and its associated methods. They will also be able to understand the concept of panic in Rust and how it is used to handle runtime errors.",
+                "The student will be able to implement panic handling in Rust programs by using the `panic!` macro and the `Result` type.",
+                "The student will be able to demonstrate their understanding of error handling and panic handling by writing and testing Rust programs that include error handling and panic handling.",
+                "The student will be able to identify and explain the differences between error handling and panic handling in Rust programs.",
+                "The student will be able to identify and explain the differences between error handling and panic handling in Rust programs.",
+                "The student will be able to compare and contrast the use of the `Result` type and the `panic!` macro in error handling and panic handling in Rust programs.",
+                "The student will be able to evaluate the effectiveness of error handling and panic handling in Rust programs.",
+                "The student will be able to distinguishe between the different types of errors that can occur in Rust programs and the appropriate methods for handling them.",
+                "The student will be able to demonstrate their understanding of error handling and panic handling by writing and testing Rust programs that include error handling and panic handling."
+            ]
+        },
+        {
+            "title": "Concurrency and Synchronization",
+            "goals": [
+                "The student will be able to explain the basic concepts of concurrency and synchronization in Rust. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared memory and message passing. They will be able to understand",
+                "The student will be able to implement a simple concurrent program in Rust. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared",
+                "The student will be able to implement a simple concurrent program in Rust. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared memory",
+                "The student will be able to use Rust's synchronization primitives to create a simple concurrent program. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared memory and message passing. They will",
+                "The student will be able to apply Rust's synchronization primitives to create a simple concurrent program. They will be able to understand the difference between shared memory and message passing. They will be able to understand the difference between shared memory and message passing. They will",
+                "The student will be able to demonstrate an understanding of the trade-offs between shared memory and message passing.",
+                "The student will be able to demonstrate an understanding of the trade-offs between shared memory and message passing.",
+                "The student will be able to differentiate between the different types of synchronization primitives in Rust.",
+                "The student will be able to describe the different types of synchronization primitives in Rust.",
+                "The student will be able to identify the different types of synchronization primitives in Rust."
+            ]
+        },
+        {
+            "title": "Memory Management and Allocation",
+            "goals": [
+                "The student will be able to explain the concept of memory management and allocation in Rust. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to understand the concept of ownership and how",
+                "The student will be able to implement memory management and allocation in Rust. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to understand the concept of ownership and how it relates",
+                "The student will be able to implement memory management and allocation in Rust. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to understand the concept of ownership and how it relates to",
+                "The student will be able to use Rust's memory management and allocation features to write efficient and safe code. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to understand the",
+                "The student will be able to apply Rust's memory management and allocation features to write efficient and safe code. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to understand the concept",
+                "The student will be able to develop code that is efficient and safe by using Rust's memory management and allocation features. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to",
+                "The student will be able to design and implement code that is efficient and safe by using Rust's memory management and allocation features. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be",
+                "The student will be able to produce code that is efficient and safe by using Rust's memory management and allocation features. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages. They will also be able to",
+                "The student will be able to construct code that is efficient and safe by using Rust's memory management and allocation features. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages.",
+                "The student will be able to build code that is efficient and safe by using Rust's memory management and allocation features. They will be able to understand the role of the Rust compiler in managing memory and how it differs from other languages."
+            ]
+        },
+        {
+            "title": "Rust Standard Library",
+            "goals": [
+                "The student will be able to identify and understand the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming",
+                "The student will be able to identify and understand the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language",
+                "The student will be able to explain the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to describe the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to define the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to list the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to distinguishthe purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to compare the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to contrast the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language.",
+                "The student will be able to evaluate the purpose and functionality of the Rust Standard Library. They will be able to use the Rust Standard Library in their programming projects. They will also be able to understand the relationship between the Rust Standard Library and the Rust programming language."
+            ]
+        },
+        {
+            "title": "Rust Cargo Build Tool",
+            "goals": [
+                "The student will be able to use the Rust Cargo build tool to build Rust programs.",
+                "The student will be able to explain the role of the Cargo build tool in the Rust ecosystem.The student will be able toexplain the role of the Cargo build tool in the Rust ecosystem.The student will be able toexplain the role of the C",
+                "The student will be able to identify the key features of the Cargo build tool.The student will be able toidentify the key features of the Cargo build tool.The student will be able toidentify the key features of the Cargo build tool.The student will",
+                "The student will be able to identify the key features of the Cargo build tool.The student will be able toidentify the key features of the Cargo build tool.The student will be able toidentify the key features of the Cargo build tool.The student will be",
+                "The student will be able to describe the process of building a Rust program using the Cargo build tool.The student will be able todescribe the process of building a Rust program using the Cargo build tool.The student will be able todescribe the process of",
+                "The student will be able to build a Rust program using the Cargo build tool.The student will be able tobuild a Rust program using the Cargo build tool.The student will be able tobuild a Rust program using the Cargo build tool.The student",
+                "The student will be able to construct a Rust program using the Cargo build tool.The student will be able toconstruct a Rust program using the Cargo build tool.The student will be able toconstruct a Rust program using the Cargo build tool.The student",
+                "The student will be able to develope a Rust program using the Cargo build tool.The student will be able todevelope a Rust program using the Cargo build tool.The student will be able todevelope a Rust program using the Cargo build tool.",
+                "The student will be able to devisep a Rust program using the Cargo build tool.The student will be able todevisep a Rust program using the Cargo build tool.The student will be able todevisep a Rust program using the Cargo build",
+                "The student will be able to demonstrate the use of the Cargo build tool in a Rust program."
+            ]
+        },
+        {
+            "title": "Rust Build System",
+            "goals": [
+                "The student will be able to build Rust programs from source code, understand the Rust build system, and be able to use the Rust build system to build Rust programs.",
+                "The student will be able to use the Rust build system to build Rust programs from source code, understand the Rust build system, and be able to use the Rust build system to build Rust programs.",
+                "The student will be able to explain the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to describe the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to define the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to identify the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to list the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to name the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to identify the Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code.",
+                "The student will be able to distinguishthe Rust build system and its components, and be able to use the Rust build system to build Rust programs from source code."
+            ]
+        },
+        {
+            "title": "Rust Build Process",
+            "goals": [
+                "The student will be able to explain the Rust build process, including the use of the Cargo tool, the concept of the build script, and the role of the build script in the compilation process.",
+                "The student will be able to describe the role of the Rust build process in the development of a Rust program. The student will be able toidentify the different stages of the Rust build process, including the compilation, linking, and execution stages. The student will",
+                "The student will be able to identify the different stages of the Rust build process, including the compilation, linking, and execution stages. The student will be able toexplain the role of the Rust build process in the development of a Rust program.",
+                "The student will be able to identify the different stages of the Rust build process, including the compilation, linking, and execution stages. The student will be able toexplain the role of the Rust build process in the development of a Rust program.The student will",
+                "The student will be able to demonstrate the use of the Cargo tool to build a Rust program. The student will be able toexplain the role of the build script in the compilation process.",
+                "The student will be able to demonstrate the use of the Cargo tool to build a Rust program. The student will be able toexplain the role of the build script in the compilation process.",
+                "The student will be able to differentiate between the different types of build scripts, including the build script for a library and the build script for an executable. The student will be able toexplain the role of the build script in the compilation process.",
+                "The student will be able to distinguishe between the different types of build scripts, including the build script for a library and the build script for an executable. The student will be able toexplain the role of the build script in the compilation process.",
+                "The student will be able to define the role of the Rust build process in the development of a Rust program. The student will be able toexplain the role of the build script in the compilation process.",
+                "The student will be able to defend the role of the Rust build process in the development of a Rust program."
+            ]
+        },
+        {
+            "title": "Rust Build Optimization",
+            "goals": [
+                "The student will be able to interprete and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to identify and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to identify and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to interpret and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to implement and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to implement and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to apply and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to use and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to explain and understand the Rust code, understand the Rust build process, and understand the Rust optimization process.",
+                "The student will be able to describe and understand the Rust code, understand the Rust build process, and understand the Rust optimization process."
+            ]
+        }
+    ]
+}

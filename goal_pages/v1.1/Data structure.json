@@ -1,0 +1,215 @@
+{
+    "title": "Data structure",
+    "chapters": [
+        {
+            "title": "Introduction to Data Structures",
+            "goals": [
+                "The student will be able to define and understand the basic concepts of data structures, including arrays, lists, stacks, queues, and trees. ",
+                "The student will be able to implement and manipulate these data structures using programming languages such as C++, Java, or Python. The student will be able toanalyze and evaluate the efficiency of algorithms and data structures in terms of time and space complexity. The student will be able to",
+                "The student will be able to implement and manipulate these data structures using programming languages such as C++, Java, or Python. The student will be able toanalyze and evaluate the efficiency of algorithms and data structures in terms of time and space complexity. The student will be able",
+                "The student will be able to apply the concepts of data structures and algorithms to solve problems in a variety of domains, including computer science, mathematics, and engineering.",
+                "The student will be able to identify and analyze the trade-offs between different data structures and algorithms, and select the most appropriate data structure or algorithm for a given problem.",
+                "The student will be able to evaluate the efficiency of algorithms and data structures in terms of time and space complexity.",
+                "The student will be able to identify and analyze the trade-offs between different data structures and algorithms, and select the most appropriate data structure or algorithm for a given problem.",
+                "The student will be able to develop and implement algorithms for sorting and searching data, and evaluate their efficiency in terms of time and space complexity.",
+                "The student will be able to demonstrate their understanding of data structures and algorithms through the development of programs that solve problems in a variety of domains.",
+                "The student will be able to demonstrate their understanding of data structures and algorithms through the development of programs that solve problems in a variety of domains."
+            ]
+        },
+        {
+            "title": "Basic Concepts",
+            "goals": [
+                "The student will be able to define and understand the basic concepts of data structures, including arrays, lists, stacks, queues, and trees. They will also be able to understand the basic operations of these data structures, such as insertion, deletion, and searching.",
+                "The student will be able to explain the differences between data structures and their applications in various programming languages.",
+                "The student will be able to implement and use data structures in a programming language of their choice.",
+                "The student will be able to describe the time complexity of various operations on data structures, such as insertion, deletion, and searching.",
+                "The student will be able to compare and analyze the efficiency of different data structures and algorithms.",
+                "The student will be able to implement and use data structures in a programming language of their choice.",
+                "The student will be able to design and implement algorithms for sorting and searching data.",
+                "The student will be able to evaluate the efficiency of different algorithms and data structures.",
+                "The student will be able to apply the concepts of data structures and algorithms to solve real-world problems.",
+                "The student will be able to identify and analyze the efficiency of different algorithms and data structures."
+            ]
+        },
+        {
+            "title": "Arrays",
+            "goals": [
+                "The student will be able to define and use arrays in programming languages. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming. The student will be able to understand",
+                "The student will be able to use arrays in programming languages. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming. The student will be able to understand the concept",
+                "The student will be able to implement arrays in programming languages. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming.",
+                "The student will be able to implement arrays in programming languages. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming.",
+                "The student will be able to apply arrays in programming languages. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming.",
+                "The student will be able to demonstrate their understanding of arrays in programming languages. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming.",
+                "The student will be able to demonstrate their understanding of arrays in programming languages.",
+                "The student will be able to differentiate between arrays and other data structures. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming.",
+                "The student will be able to distinguishthe between arrays and other data structures. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming.",
+                "The student will be able to identify the different types of arrays and their uses in programming. They will be able to understand the concept of array and its use in programming. They will also be able to understand the concept of array indexing and its use in programming."
+            ]
+        },
+        {
+            "title": "Linked Lists",
+            "goals": [
+                "The student will be able to define and understand the concept of a linked list. ",
+                "The student will be able to implement a linked list in a programming language. The student will be able toinsert and delete nodes from a linked list. The student will be able totraverse a linked list. The student will be able toimplement a doubly linked list. The student",
+                "The student will be able to implement a doubly linked list. The student will be able toimplement a circular linked list. The student will be able toimplement a circular doubly linked list. The student will be able toimplement a circular doubly linked list. The student will be",
+                "The student will be able to identify and understand the time complexity of operations on a linked list. The student will be able toimplement a sorted linked list. The student will be able toimplement a sorted circular linked list. The student will be able toimplement a sorted circular doubly",
+                "The student will be able to identify and understand the time complexity of operations on a sorted linked list. The student will be able toimplement a sorted circular doubly linked list. The student will be able toimplement a sorted circular doubly linked list. The student will be able toimplement",
+                "The student will be able to use a linked list as a data structure in a programming language. The student will be able toimplement a linked list as a data structure in a programming language.",
+                "The student will be able to demonstrate the use of a linked list as a data structure in a programming language.",
+                "The student will be able to demonstrate the use of a linked list as a data structure in a programming language.",
+                "The student will be able to differentiate between the different types of linked lists and their applications.",
+                "The student will be able to distinguishthe different types of linked lists and their applications."
+            ]
+        },
+        {
+            "title": "Stacks",
+            "goals": [
+                "The student will be able to define and understand the concept of a stack, and be able to implement a stack using an array. The student will also be able to understand the concept of a stack and its operations, and be able to implement a stack using a linked list. The",
+                "The student will be able to implement a stack using a binary tree. The student will be able toimplement a stack using a binary tree. The student will be able toimplement a stack using a binary tree. The student will be able toimplement a stack using a binary tree.",
+                "The student will be able to implement a stack using a binary tree.",
+                "The student will be able to identify the different types of stacks and their operations, and be able to implement a stack using a binary tree.",
+                "The student will be able to identify the different types of stacks and their operations, and be able to implement a stack using a binary tree.",
+                "The student will be able to describe the different types of stacks and their operations, and be able to implement a stack using a binary tree.",
+                "The student will be able to explain the different types of stacks and their operations, and be able to implement a stack using a binary tree.",
+                "The student will be able to distinguishthe different types of stacks and their operations, and be able to implement a stack using a binary tree.",
+                "The student will be able to differentiate the different types of stacks and their operations, and be able to implement a stack using a binary tree.",
+                "The student will be able to demonstrate the different types of stacks and their operations, and be able to implement a stack using a binary tree."
+            ]
+        },
+        {
+            "title": "Queues",
+            "goals": [
+                "The student will be able to define and understand the basic concepts of queues, including the enqueue and dequeue operations. They will also be able to understand the different types of queues, such as circular queues and priority queues. The student will be able to implement",
+                "The student will be able to implement queues in a programming language, and understand the time complexity of the operations. They will also be able to analyze the efficiency of different algorithms for queue operations.",
+                "The student will be able to implement queues in a programming language, and understand the time complexity of the operations. They will also be able to analyze the efficiency of different algorithms for queue operations.",
+                "The student will be able to apply the concepts of queues to solve real-world problems, such as managing resources in a computer system or scheduling tasks in a production line.",
+                "The student will be able to identify and analyze the different types of queues, such as circular queues and priority queues.",
+                "The student will be able to identify and analyze the different types of queues, such as circular queues and priority queues.",
+                "The student will be able to explain the different types of queues, such as circular queues and priority queues.",
+                "The student will be able to describe the different types of queues, such as circular queues and priority queues.",
+                "The student will be able to distinguishthe different types of queues, such as circular queues and priority queues.",
+                "The student will be able to differentiate the different types of queues, such as circular queues and priority queues."
+            ]
+        },
+        {
+            "title": "Trees",
+            "goals": [
+                "The student will be able to define and understand the concept of a tree, and be able to describe the properties of a tree. The student will be able to describe the properties of a binary tree, and be able to describe the properties of a binary search tree. The student will",
+                "The student will be able to describe the properties of a binary tree, and be able to describe the properties of a binary search tree. The student will be able to describe the properties of a binary tree, and be able to describe the properties of a binary search tree. The student will",
+                "The student will be able to implement a binary tree, and be able to implement a binary search tree. The student will be able toimplement a binary tree, and be able to implement a binary search tree. The student will be able toimplement a binary tree, and be able",
+                "The student will be able to implement a binary tree, and be able to implement a binary search tree. The student will be able toimplement a binary tree, and be able to implement a binary search tree. The student will be able toimplement a binary tree, and be able to",
+                "The student will be able to use the binary tree and binary search tree to solve problems. The student will be able touse the binary tree and binary search tree to solve problems. The student will be able touse the binary tree and binary search tree to solve problems. The student",
+                "The student will be able to explain the use of the binary tree and binary search tree in solving problems. The student will be able toexplain the use of the binary tree and binary search tree in solving problems. The student will be able toexplain the use of the binary",
+                "The student will be able to examine the use of the binary tree and binary search tree in solving problems. The student will be able toexamine the use of the binary tree and binary search tree in solving problems. The student will be able toexamine the use of the binary",
+                "The student will be able to evaluate the use of the binary tree and binary search tree in solving problems. The student will be able toevaluate the use of the binary tree and binary search tree in solving problems. The student will be able toevaluate the use of the binary",
+                "The student will be able to assess the use of the binary tree and binary search tree in solving problems. The student will be able toassess the use of the binary tree and binary search tree in solving problems. The student will be able toassess the use of the binary",
+                "The student will be able to critique the use of the binary tree and binary search tree in solving problems. The student will be able tocritique the use of the binary tree and binary search tree in solving problems. The student will be able tocritique the use of the binary"
+            ]
+        },
+        {
+            "title": "Graphs",
+            "goals": [
+                "The student will be able to define and understand the basic concepts of graphs, including vertices, edges, and the adjacency matrix. They will also be able to understand the difference between directed and undirected graphs.",
+                "The student will be able to describe and understand the basic algorithms for graph traversal, including depth-first search and breadth-first search. They will also be able to understand the difference between these two algorithms and the trade-offs between them. The student will be able to",
+                "The student will be able to apply these algorithms to solve problems related to graph traversal, such as finding the shortest path between two vertices, and the minimum spanning tree.",
+                "The student will be able to explain and understand the basic concepts of graph coloring, including the chromatic number and the chromatic polynomial. They will also be able to understand the difference between the chromatic number and the chromatic polynomial. The student will be able toapply these",
+                "The student will be able to use these concepts to solve problems related to graph coloring, such as the four-color theorem and the graph coloring problem.",
+                "The student will be able to distinguishthe between the different types of graphs, including complete graphs, bipartite graphs, and connected graphs. They will also be able to understand the difference between these types of graphs and the trade-offs between them.",
+                "The student will be able to identify and understand the basic concepts of graph theory, including the Eulerian path, the Eulerian circuit, and the Eulerian tour. They will also be able to understand the difference between these concepts and the trade-offs between them.",
+                "The student will be able to identify and understand the basic concepts of graph theory, including the Eulerian path, the Eulerian circuit, and the Eulerian tour. They will also be able to understand the difference between these concepts and the trade-offs between them.",
+                "The student will be able to solve problems related to graph theory, such as the bridges of Konigsberg problem and the seven bridges of Koenigsburg problem.",
+                "The student will be able to summarize and understand the basic concepts of graph theory, including the Eulerian path, the Eulerian circuit, and the Eulerian tour. They will also be able to understand the difference between these concepts and the trade-offs between them."
+            ]
+        },
+        {
+            "title": "Hash Tables",
+            "goals": [
+                "The student will be able to define and understand the concept of a hash table.",
+                "The student will be able to explain the difference between a hash table and a binary search tree.The student will be able toimplement a hash table in a programming language.The student will be able toanalyze the performance of a hash table.",
+                "The student will be able to implement a hash function.",
+                "The student will be able to implement a hash table with chaining.",
+                "The student will be able to describe the advantages and disadvantages of a hash table.",
+                "The student will be able to compare the performance of a hash table and a binary search tree.",
+                "The student will be able to identify the best data structure to use for a given problem based on the characteristics of the data.",
+                "The student will be able to identify the best hash function to use for a given problem based on the characteristics of the data.",
+                "The student will be able to distinguishe between the different types of hash functions.",
+                "The student will be able to evaluate the performance of a hash function."
+            ]
+        },
+        {
+            "title": "Heaps",
+            "goals": [
+                "The student will be able to define, understand and use the concept of a heap. ",
+                "The student will be able to describe the properties of a heap and the properties of a complete binary tree. The student will be able toimplement a heap data structure and use it to solve problems. The student will be able todescribe the properties of a heap and the properties of",
+                "The student will be able to implement a heap data structure and use it to solve problems. The student will be able todescribe the properties of a heap and the properties of a complete binary tree.",
+                "The student will be able to implement a heap data structure and use it to solve problems.",
+                "The student will be able to explain the properties of a heap and the properties of a complete binary tree.",
+                "The student will be able to use a heap data structure to solve problems.",
+                "The student will be able to identify the properties of a heap and the properties of a complete binary tree.",
+                "The student will be able to identify the properties of a heap and the properties of a complete binary tree.",
+                "The student will be able to apply a heap data structure to solve problems.",
+                "The student will be able to demonstrate the properties of a heap and the properties of a complete binary tree."
+            ]
+        },
+        {
+            "title": "Binary Trees",
+            "goals": [
+                "The student will be able to define and understand the concept of binary trees. They will be able to understand the different types of binary trees such as full binary trees, complete binary trees, and binary search trees. They will also be able to understand the different types of binary tree traversals",
+                "The student will be able to implement binary trees in a programming language. They will be able to implement binary trees in a programming language. They will be able to implement binary trees in a programming language. They will be able to implement binary trees in a programming language. They will be",
+                "The student will be able to implement binary trees in a programming language. They will be able to implement binary trees in a programming language. They will be able to implement binary trees in a programming language. They will be able to implement binary trees in a programming language.",
+                "The student will be able to use binary trees to solve problems. They will be able to use binary trees to solve problems. They will be able to use binary trees to solve problems. They will be able to use binary trees to solve problems.",
+                "The student will be able to compare and analyze the performance of binary trees. They will be able to compare and analyze the performance of binary trees. They will be able to compare and analyze the performance of binary trees.",
+                "The student will be able to identify and analyze the different types of binary trees. They will be able to identify and analyze the different types of binary trees.",
+                "The student will be able to identify and analyze the different types of binary trees.",
+                "The student will be able to explain the different types of binary trees.",
+                "The student will be able to describe the different types of binary trees.",
+                "The student will be able to distinguishthe different types of binary trees."
+            ]
+        },
+        {
+            "title": "Advanced Data Structures",
+            "goals": [
+                "The student will be able to identify and understand the basic principles of data structures and algorithms. They will be able to analyze and design efficient algorithms for solving problems. They will also be able to implement these algorithms in a programming language.",
+                "The student will be able to identify and understand the basic principles of data structures and algorithms. They will be able to analyze and design efficient algorithms for solving problems. They will also be able to implement these algorithms in a programming language.",
+                "The student will be able to implement and analyze the efficiency of data structures and algorithms. They will be able to analyze and design efficient algorithms for solving problems.",
+                "The student will be able to implement and analyze the efficiency of data structures and algorithms.",
+                "The student will be able to apply the principles of data structures and algorithms to solve problems.",
+                "The student will be able to use the principles of data structures and algorithms to solve problems.",
+                "The student will be able to develop a deep understanding of the principles of data structures and algorithms.",
+                "The student will be able to demonstrate a deep understanding of the principles of data structures and algorithms.",
+                "The student will be able to demonstrate a deep understanding of the principles of data structures and algorithms.",
+                "The student will be able to differentiate between the various types of data structures and algorithms."
+            ]
+        },
+        {
+            "title": "Advanced Algorithms",
+            "goals": [
+                "The student will be able to identify and analyze the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity. The student will be",
+                "The student will be able to identify and analyze the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity. The student will be able",
+                "The student will be able to implement and use the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity. The student will be",
+                "The student will be able to implement and use the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity. The student will be able",
+                "The student will be able to apply the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity. The student will be able",
+                "The student will be able to use the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity.",
+                "The student will be able to explain the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity.",
+                "The student will be able to describe the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity.",
+                "The student will be able to define the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity.",
+                "The student will be able to list the most common algorithms used in computer science, and understand their time complexity. They will also be able to analyze and compare the efficiency of different algorithms, and understand the trade-offs between time complexity and space complexity."
+            ]
+        },
+        {
+            "title": "Data Structures in Practice",
+            "goals": [
+                "The student will be able to identify and understand the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most",
+                "The student will be able to identify and understand the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate",
+                "The student will be able to explain the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to describe the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to define the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to distinguishthe basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to demonstrate the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to demonstrate the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to differentiate the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data",
+                "The student will be able to defend the basic principles of data structures and algorithms. They will be able to apply these principles to solve problems in a variety of contexts. They will also be able to analyze the efficiency of algorithms and data structures, and to choose the most appropriate data"
+            ]
+        }
+    ]
+}
