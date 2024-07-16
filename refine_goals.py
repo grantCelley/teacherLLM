@@ -3,6 +3,7 @@ from guidance import gen, select, system, user, assistant
 
 from tqdm import tqdm
 
+from time import sleep
 import glob
 import json
 
@@ -199,7 +200,6 @@ def make_specific(goal:str) -> str:
 
 unedited_goals_pages = glob.glob("goal_pages/v1.1/*.json")
 print(unedited_goals_pages)
-unedited_goals_pages = [unedited_goals_pages[2]]
 
 for page in tqdm(unedited_goals_pages, "Page"):
     course = {}
@@ -210,20 +210,18 @@ for page in tqdm(unedited_goals_pages, "Page"):
     title = course["title"]
     refienedChapers = []
     for chapter in tqdm(chapters, title + " chapters"):
+        sleep(10)
         goals = chapter["goals"]
         chapterTitle = chapter["title"]
         #makes the goals to be a single sentance
-        print("Make single sentance")
         for goal in goals:
             goal = prune_to_one_sentence(goal)
 
         
         #removes duplicate goals
-        print("Remove duplicates")
         goals = remove_duplicates(goals)
         
         #makes the goal into one action verb
-        print("Get one action verb")
         new_goals_list = []
         for goal in goals:
             new_goals_list.extend(multiple_action_verbs(goal))
@@ -231,21 +229,18 @@ for page in tqdm(unedited_goals_pages, "Page"):
 
        
        #gets ride of the goals that are not mesurable
-        print("Only keeping mesureable goals")
         for goal in goals:
             if not is_mesurable(goal):
                 goals.remove(goal)
 
 
         #removes the goals that don't make sense
-        print("Removing nonsense goals")
         for goal in goals:
             if not make_sense(goal, title):
                 goals.remove(goals)
 
 
         #make the goals specific
-        print("Makes the goals specific")
         new_goals_list = []
         for goal in goals:
             new_goals_list.append(make_specific(goal))
