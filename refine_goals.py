@@ -1,16 +1,23 @@
 import guidance
 from guidance import gen, select, system, user, assistant
 
+from guidance.chat import ChatMLTemplate
+import guidance.chat
+from transformers import AutoModelForCausalLM, BitsAndBytesConfig, AutoTokenizer 
 from tqdm import tqdm
 
+from tokenizers import Tokenizer
+import torch
 from time import sleep
 import glob
 import json
+import os
 
-MODEL = "dolphin-2.8-mistral-7b-v02.Q2_K.gguf"
-model_kwargs = {"verbose": False, "n_gpu_layers": 256, "n_ctx": 30000}
+MODEL_PATH = 'cognitivecomputations/dolphin-2.9.3-mistral-7B-32k'
+quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 
-model = guidance.models.LlamaCppChat(MODEL, echo=False, **model_kwargs)
+model = guidance.models.Transformers(MODEL_PATH, echo=False, chat_template=ChatMLTemplate,  quantization_config=quantization_config, device_map="auto")
+
 
 def prune_to_one_sentence(goal:str) -> str:
     """
@@ -67,7 +74,7 @@ def multiple_action_verbs(goal:str) -> list[str]:
         with user():
             lm += "Then split the objective up into independent objectives."
         with assistant():
-            lm += f"The first objective is:\n" + gen(name="first-goal", max_tokens=20, stop=['.'])  + "\n The second objective is:\n" + gen(name="second-goal", max_tokens=20, stop=["."]) 
+            lm += f"The first objective is:\n" + gen(name="first-goal", max_tokens=20, temperature=0.2, stop=['.', '\n'])  + "\n The second objective is:\n" + gen(name="second-goal", max_tokens=20, stop=["."]) 
         
         goals_list = [ lm["first-goal"], lm["second-goal"] ]
 
@@ -98,7 +105,7 @@ def break_down(goal:str) -> list[str]:
                 max_times = 2
                 while cont and max_times > 0:
                     max_times =- 1
-                    lm += gen(name="new_goals", max_tokens=20, stop=[".", '\n'], list_append=True) + '\n'
+                    lm += gen(name="new_goals", max_tokens=20, temperature=0.2, stop=[".", '\n'], list_append=True) + '\n'
                     if lm["new_goals"][-1].endswith(".") == True:
                         cont=False
 
@@ -188,7 +195,7 @@ def make_specific(goal:str) -> str:
         with user():
             lm +="Rewrite the goal to be secific."
         with assistant():
-            lm += gen("rewrite", stop=".")
+            lm += gen("rewrite", temperature=0.2, stop=[".", "\n"])
         
         objective = lm["rewrite"]
     
@@ -208,60 +215,63 @@ for page in tqdm(unedited_goals_pages, "Page"):
     
     chapters = course["chapters"]
     title = course["title"]
-    refienedChapers = []
-    for chapter in tqdm(chapters, title + " chapters"):
-        sleep(10)
-        goals = chapter["goals"]
-        chapterTitle = chapter["title"]
-        #makes the goals to be a single sentance
-        for goal in goals:
-            goal = prune_to_one_sentence(goal)
+    
+    new_path = "refiened_goals/"+ title + ".json"
+    if(os.path.isfile(new_path) is False):
+        refienedChapers = []
+        for chapter in tqdm(chapters, title + " chapters"):
+            sleep(10)
+            goals = chapter["goals"]
+            chapterTitle = chapter["title"]
+            #makes the goals to be a single sentance
+            for goal in goals:
+                goal = prune_to_one_sentence(goal)
+
+            
+            #removes duplicate goals
+            goals = remove_duplicates(goals)
+            
+            #makes the goal into one action verb
+            new_goals_list = []
+            for goal in goals:
+                new_goals_list.extend(multiple_action_verbs(goal))
+            goals = new_goals_list
 
         
-        #removes duplicate goals
-        goals = remove_duplicates(goals)
-        
-        #makes the goal into one action verb
-        new_goals_list = []
-        for goal in goals:
-            new_goals_list.extend(multiple_action_verbs(goal))
-        goals = new_goals_list
-
-       
-       #gets ride of the goals that are not mesurable
-        for goal in goals:
-            if not is_mesurable(goal):
-                goals.remove(goal)
+        #gets ride of the goals that are not mesurable
+            for goal in goals:
+                if not is_mesurable(goal):
+                    goals.remove(goal)
 
 
-        #removes the goals that don't make sense
-        for goal in goals:
-            if not make_sense(goal, title):
-                goals.remove(goals)
+            #removes the goals that don't make sense
+            for goal in goals:
+                if not make_sense(goal, title):
+                    goals.remove(goals)
 
 
-        #make the goals specific
-        new_goals_list = []
-        for goal in goals:
-            new_goals_list.append(make_specific(goal))
-        
-        goals = new_goals_list
-        
-        #trims the goal
-        new_goals_list = []
-        for goal in goals:
-            new_goals_list.append(goal.strip())
-        goals = new_goals_list
+            #make the goals specific
+            new_goals_list = []
+            for goal in goals:
+                new_goals_list.append(make_specific(goal))
+            
+            goals = new_goals_list
+            
+            #trims the goal
+            new_goals_list = []
+            for goal in goals:
+                new_goals_list.append(goal.strip())
+            goals = new_goals_list
 
-        #removes duplicates again
-        goals = remove_duplicates(goals)
+            #removes duplicates again
+            goals = remove_duplicates(goals)
 
-        chapter_obj = {"title": chapterTitle, "goals":goals}
-        refienedChapers.append(chapter_obj)
+            chapter_obj = {"title": chapterTitle, "goals":goals}
+            refienedChapers.append(chapter_obj)
 
-    with open("refiened_goals/"+ title + ".json", "w+") as f:
-        page_obj = {"title": title, "chapters": refienedChapers }
-        f.write(json.dumps(page_obj))
+        with open("refiened_goals/"+ title + ".json", "w+") as f:
+            page_obj = {"title": title, "chapters": refienedChapers }
+            f.write(json.dumps(page_obj))
        
 
 
