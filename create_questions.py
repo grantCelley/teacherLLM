@@ -14,7 +14,7 @@ import json
 import os
 
 MODEL_PATH = 'cognitivecomputations/dolphin-2.9.3-mistral-7B-32k'
-quantization_config = BitsAndBytesConfig(load_in_4bit=True)
+quantization_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16)
 
 model = guidance.models.Transformers(MODEL_PATH, echo=False, chat_template=ChatMLTemplate,  quantization_config=quantization_config, device_map="auto")
 
@@ -70,7 +70,7 @@ def generate_incorect_answers(question:str, correct_ans:str) -> list[str]:
         lm += f"Question:{question}\nCorrect Answer:{correct_ans}"
     with assistant():
         for i in range(4):
-            lm += f"Incorrect answer{i + 1}" + gen(name="incorrect answers", list_append=True, stop=['.', '\n']) + '\n'
+            lm += f"Incorrect answer{i + 1}: " + gen(name="incorrect answers", list_append=True, stop=['.', '\n']) + '\n'
 
     return lm["incorrect answers"]
 
@@ -110,7 +110,7 @@ for course in tqdm(courses, "Courses"):
                 
                 goal_objs.append({
                     "goal":goal,
-                    "questions": questions
+                    "questions": question_objs
                 })
             
             chapter["goal_objs"] = goal_objs
